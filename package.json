@@ -1,0 +1,19 @@
+{
+  "name": "vite-tailwind2.x-setup",
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "serve": "vite preview"
+  },
+  "devDependencies": {
+    "@tailwindcss/forms": "^0.3.3",
+    "autoprefixer": "^10.2.6",
+    "postcss": "^8.3.0",
+    "tailwindcss": "^2.1.4",
+    "vite": "^2.3.5"
+  },
+  "dependencies": {
+    "alpinejs": "^2.8.2"
+  }
+}
