@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Frontendfunn - Tailwindcss 2.x Vite App</title>
+  <script type="module" crossorigin src="/vite-tailwind2.x-setup/assets/topNavbar.af6ef274.js"></script>
+  <link rel="modulepreload" href="/vite-tailwind2.x-setup/assets/vendor.8e1e8bbd.js">
+  <link rel="stylesheet" href="/vite-tailwind2.x-setup/assets/style.7080a971.css">
+</head>
+  <body class="bg-gray-100">
+    <nav class="bg-blue-700 shadow-md" x-data="{navbarOpen:false}">
+      <!-- container -->
+      <div class="container flex flex-wrap px-4 py-2 mx-auto lg:space-x-4">
+        <!-- brand -->
+        <a
+          href="#"
+          class="inline-flex p-2 text-xl font-bold tracking-wider text-white uppercase "
+          >Frontendfunn</a
+        >
+        <!-- brand -->
+        <!-- toggler btn -->
+        <button
+          class="inline-flex items-center justify-center w-10 h-10 ml-auto text-white border rounded-md outline-none  lg:hidden focus:outline-none"
+          @click="navbarOpen = !navbarOpen"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-6 h-6"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+        <!-- toggler btn -->
+        <!-- menu -->
+        <div
+          class="w-full mt-2 lg:inline-flex lg:w-auto lg:mt-0"
+          :class="{'hidden':!navbarOpen,'flex':navbarOpen}"
+        >
+          <ul
+            class="flex flex-col w-full space-y-2  lg:w-auto lg:flex-row lg:space-y-0 lg:space-x-2"
+          >
+            <li>
+              <a
+                href="#"
+                class="flex px-4 py-2 font-medium text-white bg-blue-900 rounded-md  hover:bg-blue-800"
+                >Dashboard</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex px-4 py-2 font-medium text-white rounded-md  hover:bg-blue-800"
+                >Projects</a
+              >
+            </li>
+            <!-- dropdown -->
+            <li class="relative" x-data="{dropdownOpen:false}">
+              <button
+                href="#"
+                class="flex w-full px-4 py-2 font-medium text-white rounded-md outline-none  focus:outline-none hover:bg-blue-800"
+                @click="dropdownOpen = !dropdownOpen"
+              >
+                Dropdown
+              </button>
+              <!-- dropdown menu -->
+              <div
+                class="right-0 p-2 mt-1 bg-white rounded-md shadow lg:absolute"
+                :class="{'hidden':!dropdownOpen,'flex flex-col':dropdownOpen}"
+                @click.away="dropdownOpen = false"
+              >
+                <ul class="space-y-2 lg:w-48">
+                  <li>
+                    <a
+                      href="#"
+                      class="flex p-2 font-medium text-gray-600 rounded-md  hover:bg-gray-100 hover:text-black"
+                      >Categories</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex p-2 font-medium text-gray-600 rounded-md  hover:bg-gray-100 hover:text-black"
+                      >Inventories</a
+                    >
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      class="flex p-2 font-medium text-gray-600 rounded-md  hover:bg-gray-100 hover:text-black"
+                      >Brands</a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <!-- dropdown menu -->
+            </li>
+            <!-- dropdown -->
+            <li>
+              <a
+                href="#"
+                class="flex px-4 py-2 font-medium text-white rounded-md  hover:bg-blue-800"
+                >Orders</a
+              >
+            </li>
+            <li>
+              <a
+                href="#"
+                class="flex px-4 py-2 font-medium text-white rounded-md  hover:bg-blue-800"
+                >Invoices</a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- menu -->
+      </div>
+      <!-- container -->
+    </nav>
+    
+  </body>
+</html>
