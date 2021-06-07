@@ -5,9 +5,10 @@
     <link rel="icon" type="image/svg+xml" href="favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontendfunn - Tailwindcss 2.x Vite App</title>
-  <script type="module" crossorigin src="/vite-tailwind2.x-setup/assets/topNavbar.a54a95ac.js"></script>
-  <link rel="modulepreload" href="/vite-tailwind2.x-setup/assets/vendor.8e1e8bbd.js">
-  <link rel="stylesheet" href="/vite-tailwind2.x-setup/assets/style.7080a971.css">
+  <script type="module" crossorigin src="/vite-tailwind2.x-setup/assets/topNavbar.1e66f1e6.js"></script>
+  <link rel="modulepreload" href="/vite-tailwind2.x-setup/assets/main.953c4359.js">
+  <link rel="modulepreload" href="/vite-tailwind2.x-setup/assets/vendor.4fc4d4cb.js">
+  <link rel="stylesheet" href="/vite-tailwind2.x-setup/assets/main.5230d9b5.css">
 </head>
   <body class="bg-gray-100">
     <nav class="bg-blue-700 shadow-md" x-data="{navbarOpen:false}">
@@ -125,6 +126,78 @@
       </div>
       <!-- container -->
     </nav>
+
+    <div class="container mx-auto">
+      <div class="my-5 text-xl font-bold">Code</div>
+      <div class="w-full p-5 overflow-auto bg-white rounded-md">
+        <div
+          class="w-full overflow-auto bg-black rounded-md"
+          :class="{'hidden':tabActive !== 2}"
+        >
+          <pre>
+<code class="bg-transparent rounded-md select-all html">
+ &lt;nav class=&quot;bg-blue-700 shadow-md&quot; x-data=&quot;{navbarOpen:false}&quot;&gt;
+  &lt;!-- container --&gt;
+  &lt;div class=&quot;container flex flex-wrap px-4 py-2 mx-auto lg:space-x-4&quot;&gt;
+    &lt;!-- brand --&gt;
+    &lt;a href=&quot;#&quot; class=&quot;inline-flex p-2 text-xl font-bold tracking-wider text-white uppercase&quot;&gt;Frontendfunn&lt;/a&gt;
+    &lt;!-- brand --&gt;
+    &lt;!-- toggler btn --&gt;
+    &lt;button class=&quot;inline-flex items-center justify-center w-10 h-10 ml-auto text-white border rounded-md outline-none lg:hidden focus:outline-none&quot; @click=&quot;navbarOpen = !navbarOpen&quot;&gt;
+      &lt;svg xmlns=&quot;http://www.w3.org/2000/svg&quot; class=&quot;w-6 h-6&quot; fill=&quot;none&quot; viewBox=&quot;0 0 24 24&quot; stroke=&quot;currentColor&quot;&gt;
+        &lt;path stroke-linecap=&quot;round&quot; stroke-linejoin=&quot;round&quot; stroke-width=&quot;2&quot; d=&quot;M4 6h16M4 12h16M4 18h16&quot; /&gt;
+      &lt;/svg&gt;
+    &lt;/button&gt;
+    &lt;!-- toggler btn --&gt;
+    &lt;!-- menu --&gt;
+    &lt;div class=&quot;w-full mt-2 lg:inline-flex lg:w-auto lg:mt-0&quot; :class=&quot;{'hidden':!navbarOpen,'flex':navbarOpen}&quot;&gt;
+      &lt;ul class=&quot;flex flex-col w-full space-y-2 lg:w-auto lg:flex-row lg:space-y-0 lg:space-x-2&quot;&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;#&quot; class=&quot;flex px-4 py-2 font-medium text-white bg-blue-900 rounded-md hover:bg-blue-800&quot;&gt;Dashboard&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;#&quot; class=&quot;flex px-4 py-2 font-medium text-white rounded-md hover:bg-blue-800&quot;&gt;Projects&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;!-- dropdown --&gt;
+        &lt;li class=&quot;relative&quot; x-data=&quot;{dropdownOpen:false}&quot;&gt;
+          &lt;button href=&quot;#&quot; class=&quot;flex w-full px-4 py-2 font-medium text-white rounded-md outline-none focus:outline-none hover:bg-blue-800&quot; @click=&quot;dropdownOpen = !dropdownOpen&quot;&gt;
+            Dropdown
+          &lt;/button&gt;
+          &lt;!-- dropdown menu --&gt;
+          &lt;div class=&quot;right-0 p-2 mt-1 bg-white rounded-md shadow lg:absolute&quot; :class=&quot;{'hidden':!dropdownOpen,'flex flex-col':dropdownOpen}&quot; @click.away=&quot;dropdownOpen = false&quot;&gt;
+            &lt;ul class=&quot;space-y-2 lg:w-48&quot;&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black&quot;&gt;Categories&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black&quot;&gt;Inventories&lt;/a&gt;
+              &lt;/li&gt;
+              &lt;li&gt;
+                &lt;a href=&quot;#&quot; class=&quot;flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black&quot;&gt;Brands&lt;/a&gt;
+              &lt;/li&gt;
+            &lt;/ul&gt;
+          &lt;/div&gt;
+          &lt;!-- dropdown menu --&gt;
+        &lt;/li&gt;
+        &lt;!-- dropdown --&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;#&quot; class=&quot;flex px-4 py-2 font-medium text-white rounded-md hover:bg-blue-800&quot;&gt;Orders&lt;/a&gt;
+        &lt;/li&gt;
+        &lt;li&gt;
+          &lt;a href=&quot;#&quot; class=&quot;flex px-4 py-2 font-medium text-white rounded-md hover:bg-blue-800&quot;&gt;Invoices&lt;/a&gt;
+        &lt;/li&gt;
+      &lt;/ul&gt;
+    &lt;/div&gt;
+    &lt;!-- menu --&gt;
+  &lt;/div&gt;
+  &lt;!-- container --&gt;
+&lt;/nav&gt;
+</code>
+      </pre>
+        </div>
+      </div>
+    </div>
+
     
   </body>
 </html>
