@@ -5,21 +5,56 @@
     <link rel="icon" type="image/svg+xml" href="/vite-tailwind2.x-setup/assets/favicon.17e50649.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Frontendfunn - Tailwindcss 2.x Vite App</title>
-  <script type="module" crossorigin src="/vite-tailwind2.x-setup/assets/index.28c22727.js"></script>
+  <script type="module" crossorigin src="/vite-tailwind2.x-setup/assets/main.91fd6a58.js"></script>
   <link rel="modulepreload" href="/vite-tailwind2.x-setup/assets/vendor.8e1e8bbd.js">
-  <link rel="stylesheet" href="/vite-tailwind2.x-setup/assets/index.b4010137.css">
+  <link rel="stylesheet" href="/vite-tailwind2.x-setup/assets/style.e72a242b.css">
 </head>
   <body class="bg-gray-100">
-    <div
-      class="text-3xl font-bold text-center bg-white p-5 text-purple-700 shadow"
-    >
+    <div class="p-3 text-3xl font-bold text-center text-white bg-black shadow">
       Frontendfunn - Tailwindcss 2.x Vite app Setup
     </div>
-    <p class="text-white bg-black p-2 text-center">
-      Please Switch betwwen the branches for the
-      <span class="font-black text-2xl"> Tailwind</span>
-      <span class="text-green-400 font-black text-2xl"> Components</span>
-    </p>
+
+    <div class="container mx-auto">
+      <div class="my-3 text-xl">List Of Components Available</div>
+      <table class="bg-white border rounded-md lg:w-1/2">
+        <thead class="text-left text-gray-500 border-b bg-gray-50">
+          <th class="px-4 py-2">S.no</th>
+          <th class="px-4 py-2">Component Name</th>
+          <th class="px-4 py-2">Status</th>
+          <th class="px-4 py-2">Preview Link</th>
+        </thead>
+        <tbody>
+          <tr class="bg-white">
+            <td class="px-4 py-2 font-medium">1</td>
+            <td class="px-4 py-2 font-medium">Navbar with Dropdown</td>
+            <td class="px-4 py-2 font-medium">Completed</td>
+            <td class="px-4 py-2 font-medium">
+              <a
+                href="./pages/topNavbar/index.html"
+                class="flex items-center p-3 text-blue-700 rounded-md  bg-blue-50"
+                >Link
+                <span>
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="w-5 h-5 ml-3"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke="currentColor"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    />
+                  </svg> </span
+              ></a>
+            </td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+
     
   </body>
 </html>
